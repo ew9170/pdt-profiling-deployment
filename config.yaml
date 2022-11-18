@@ -1,0 +1,14 @@
+"brokers":
+  - "secured-kafka01.dlas1.ucloud.int:9093"
+  - "secured-kafka01.dlas1.ucloud.int:9093"
+  - "secured-kafka02.dlas1.ucloud.int:9093"
+  - "secured-kafka03.dlas1.ucloud.int:9093"
+  - "secured-kafka04.dlas1.ucloud.int:9093"
+  - "secured-kafka05.dlas1.ucloud.int:9093"
+
+"read_topic": "development.internal.kafka-ops.read-test-eaton"
+"write_topic": "development.internal.kafka-ops.write-test-eaton"
+
+"incoming_time": 0.5
+"querying_time": 0.5
+"outgoing_time": 0.5
