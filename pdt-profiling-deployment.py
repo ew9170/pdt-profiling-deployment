@@ -14,14 +14,8 @@ DEFAULT_TIME = 0.5
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-v', metavar='VERBOSITY', help='Amount of info you want. Uses standard python logging levels,'
-                                                        'going from DEBUG, INFO, WARNING, ERROR, and CRITICAL, where'
-                                                        'WARNING is the default.', type=str, default='WARNING')
-    parser.add_argument('--incoming', metavar='SECONDS', help='Amount of time to process incoming data',
-                        default=DEFAULT_TIME)
-    parser.add_argument('--querying', metavar='SECONDS', help='Amount of time to query the database',
-                        default=DEFAULT_TIME)
-    parser.add_argument('--outgoing', metavar='SECONDS', help='Amount of time to send out messages',
-                        default=DEFAULT_TIME)
+                                                        ' going from DEBUG, INFO, WARNING, ERROR, and CRITICAL, where'
+                                                        ' WARNING is the default.', type=str, default='WARNING')
 
     args = parser.parse_args()
     configure_verbosity(args.v)
