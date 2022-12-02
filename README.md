@@ -6,7 +6,9 @@ have access to your Postgres server.
 
 ## Quick Start
 
+
 Create the secrets from the certificates (replace the --from-file argument):
+These certificates are used to connect to the brokers specified in the configuration file.
 
 caroot-pem will likely be called "CARoot.pem".
 
