@@ -1,2 +1,5 @@
 /venv/
 /certs/
+config.yaml
+outputfile.txt
+.idea
