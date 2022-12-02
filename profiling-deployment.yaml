@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pdt-profiling-deployment
@@ -14,3 +14,23 @@ spec:
       containers:
         - name: profiling-deployment
           image: eatonwu/pdt-profiling-deployment
+          volumeMounts:
+            - mountPath: /app/certs
+              name: certs
+              readOnly: true
+            - mountPath: /app/config
+              name: config-file-volume
+              readOnly: true
+      volumes:
+        - name: certs
+          projected:
+            sources:
+            - secret:
+                name: caroot-pem
+            - secret:
+                name: cert-pem
+            - secret:
+                name: privatekey-pem
+        - name: config-file-volume
+          configMap:
+            name: config-file
