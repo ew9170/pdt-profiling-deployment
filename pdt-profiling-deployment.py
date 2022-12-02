@@ -29,21 +29,6 @@ def parse_args():
     args = parser.parse_args()
     configure_verbosity(args.v)
 
-    if args.incoming is not None:
-        if args.incoming < 0:
-            logging.error('incoming must be > 0 seconds')
-            exit(-1)
-
-    if args.querying is not None:
-        if args.querying < 0:
-            logging.error('querying must be > 0 seconds')
-            exit(-1)
-
-    if args.outgoing is not None:
-        if args.outgoing < 0:
-            logging.error('outgoing must be > 0 seconds')
-            exit(-1)
-
     return args
 
 
