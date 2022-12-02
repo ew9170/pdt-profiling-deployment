@@ -1,12 +1,15 @@
 # author: Eaton Wu
-import time
-
+import confluent_kafka
 import yaml
 from confluent_kafka import Consumer, Producer, admin
 from confluent_kafka.admin import AdminClient, NewTopic
 import argparse
 import psycopg2
 import logging
+import time
+import threading
+
+import postgres_queries
 
 DEFAULT_TIME = 0.5
 
