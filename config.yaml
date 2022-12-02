@@ -1,3 +1,5 @@
+# learn more about this configuration file in config_README.md
+
 "brokers":
   - "secured-kafka01.dlas1.ucloud.int:9093"
   - "secured-kafka01.dlas1.ucloud.int:9093"
