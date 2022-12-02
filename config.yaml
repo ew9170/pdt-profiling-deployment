@@ -6,9 +6,27 @@
   - "secured-kafka04.dlas1.ucloud.int:9093"
   - "secured-kafka05.dlas1.ucloud.int:9093"
 
-"read_topic": "development.internal.kafka-ops.read-test-eaton"
+"certs":
+  "CA": "certs/CARoot.pem"
+  "private_key": "certs/ko-api-key.pem"
+  "certificate": "certs/ko-api.pem"
+
+"read_topics":
+  - "development.internal.kafka-ops.read-test-eaton"
 "write_topic": "development.internal.kafka-ops.write-test-eaton"
 
-"incoming_time": 0.5
-"querying_time": 0.5
-"outgoing_time": 0.5
+"incoming_time": 1
+"querying_time": 0
+"outgoing_time": 0
+
+"output_settings":
+  "output_to_file": "outputfile.txt"
+
+postgres:
+  host: "localhost"
+  port: 5432
+  user: "admin"
+  password: "admin"
+  dbname: "postgresdb"
+  min_range: 1
+  max_range: 20
