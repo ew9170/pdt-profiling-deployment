@@ -9,6 +9,7 @@ have access to your Postgres server.
 These certificates are used to connect to the brokers specified in the configuration file.
 
 Create the secrets from the certificates (replace the --from-file argument):
+
 caroot-pem will likely be called "CARoot.pem".
 
 ```bash
@@ -104,4 +105,4 @@ kubectl create secret generic privatekey-pem --from-file='key_here'
 ```
 
 Inside the container, there will be a certs directory containing the secrets specified
-using these commands.
+using these commands. You must specify these file names in the configuration file (under the certs field). You can learn more about this in the config_README.md file.
